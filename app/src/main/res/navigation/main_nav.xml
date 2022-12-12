@@ -190,4 +190,16 @@
         android:id="@+id/payByCardFragment"
         android:name="com.va.workercall.ui.main.paybycard.PayByCardFragment"
         android:label="PayByCardFragment" />
+    <fragment
+        android:id="@+id/homeWorkerFragment"
+        android:name="com.va.workercall.ui.main.homeworker.HomeWorkerFragment"
+        android:label="HomeWorkerFragment" />
+    <fragment
+        android:id="@+id/myService"
+        android:name="com.va.workercall.ui.main.myservice.MyService"
+        android:label="MyService" />
+    <fragment
+        android:id="@+id/editServiceFragment"
+        android:name="com.va.workercall.ui.main.editservice.EditServiceFragment"
+        android:label="EditServiceFragment" />
 </navigation>

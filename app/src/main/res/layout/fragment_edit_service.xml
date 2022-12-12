@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Sửa dịch vụ"
+            android:textColor="#1B1E28"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintBottom_toTopOf="@id/tv_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tvNameService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Tên dịch vụ"
+                    android:textColor="#1B1E28"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/custom_bg_social"
+                    android:fontFamily="@font/inter_regular"
+                    android:gravity="start"
+                    android:text="Bảo dưỡng vệ sinh tủ lạnh"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="#494F58"
+                    android:textColorHint="#494F58"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvNameService" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Giá"
+                    android:textColor="#1B1E28"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_name"
+                    />
+                <EditText
+                    android:id="@+id/edt_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/custom_bg_social"
+                    android:fontFamily="@font/inter_regular"
+                    android:gravity="start"
+                    android:text="180.000vnđ"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="#494F58"
+                    android:textColorHint="#494F58"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+                <TextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Nội dung dịch vụ"
+                    android:textColor="#1B1E28"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_price"
+                    />
+                <EditText
+                    android:id="@+id/edt_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/custom_bg_social"
+                    android:fontFamily="@font/inter_regular"
+                    android:gravity="start"
+                    android:text="Kiểm tra, vệ sinh bảo dưỡng tủ lạnh, loại bỏ các nguy cơ hỏng hóc, tăng cường khả năng làm lạnh của máy, giảm nguy cơ lây lan vi khuẩn trong máy"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="#494F58"
+                    android:textColorHint="#494F58"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvContent" />
+
+
+                <TextView
+                    android:id="@+id/tvJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Công việc thực hiện"
+                    android:textColor="#1B1E28"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_content"
+                    />
+                <EditText
+                    android:id="@+id/edt_job"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/custom_bg_social"
+                    android:fontFamily="@font/inter_regular"
+                    android:gravity="start"
+                    android:text=" * Kiểm tra sơ bộ máy\n
+* Vệ sinh bên trong và làm sạch găng cao su tủ lạnh\n
+* Vệ sinh sạch sẽ bên ngoài tủ lạnh và kiểm tra lại đường điện, giàn lạnh, quạt, máy nén,...\n
+* Vệ sinh hiện trường, nghiệm thu và bàn giao tủ lạnh hoạt động ổn định cho khách hàng"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="#494F58"
+                    android:textColorHint="#494F58"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvJob" />
+
+                <TextView
+                    android:id="@+id/tvInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Thông tin dịch vụ"
+                    android:textColor="#1B1E28"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_job"
+                    />
+                <EditText
+                    android:id="@+id/edt_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/custom_bg_social"
+                    android:fontFamily="@font/inter_regular"
+                    android:gravity="start"
+                    android:text="Phục vụ tại các quận nội thành trên địa bàn Hà Nội"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="#494F58"
+                    android:textColorHint="#494F58"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvInfo" />
+
+                <TextView
+                    android:id="@+id/tvInsurance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Bảo hành"
+                    android:textColor="#1B1E28"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_info"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_insurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="@drawable/custom_bg_social"
+                    android:fontFamily="@font/inter_regular"
+                    android:gravity="start"
+                    android:text="3 ngày"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="#494F58"
+                    android:textColorHint="#494F58"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvInsurance" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/custom_bg_ffa92e_round_16"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:paddingVertical="14dp"
+            android:text="Sửa dịch vụ"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -72,6 +72,9 @@ class LoginFragment : BaseBindingFragment<FragmentLoginBinding, MainViewModel>()
         binding.btnLogin.setOnClickListener {
             navigateScreen(null, R.id.homeFragment)
         }
+        binding.ivWorker.setOnClickListener {
+            navigateScreen(null, R.id.homeWorkerFragment)
+        }
     }
 
     private fun onSetTextDontHaveAccount() {
