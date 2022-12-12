@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Thông tin thẻ"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#1B1E28"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_title_card_number"
+            android:text="Số thẻ"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/edt_card_number"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_card_number"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_bg_f7f7f9_round_16"
+            android:hint="Số thẻ"
+            android:textColorHint="#CECECE"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="16dp"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_title_date_expired"
+            android:text="Ngày hết hạn"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            app:layout_constraintTop_toBottomOf="@id/edt_card_number"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_title_cvv"
+            android:text="CVV"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            app:layout_constraintTop_toBottomOf="@id/edt_card_number"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="96dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/edt_date_expired"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_date_expired"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@id/tv_title_date_expired"
+            app:layout_constraintEnd_toStartOf="@id/edt_cvv"
+            android:background="@drawable/custom_bg_f7f7f9_round_16"
+            android:hint="Ngày hết hạn"
+            android:textColorHint="#CECECE"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="16dp"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/edt_cvv"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_cvv"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@id/tv_title_cvv"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/custom_bg_f7f7f9_round_16"
+            android:hint="CVV"
+            android:textColorHint="#CECECE"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="16dp"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_title_owner"
+            android:text="Chủ sở hữu"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            app:layout_constraintTop_toBottomOf="@id/edt_date_expired"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/edt_owner"
+            android:inputType="textCapWords"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_owner"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_bg_f7f7f9_round_16"
+            android:hint="Chủ sở hữu"
+            android:textColorHint="#CECECE"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="16dp"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_title_id"
+            android:text="CMND/CCCD/Hộ chiếu"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            app:layout_constraintTop_toBottomOf="@id/edt_owner"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/edt_id"
+            android:inputType="textCapWords"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_id"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_bg_f7f7f9_round_16"
+            android:hint="CMND/CCCD/Hộ chiếu"
+            android:textColorHint="#CECECE"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="16dp"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_set_default"
+            app:layout_constraintTop_toBottomOf="@id/edt_id"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:text="Đặt làm tài khoản mặc định"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="16sp"
+            android:textColor="#7D848D"
+            android:drawablePadding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:drawableStartCompat="@drawable/ic_not_choose" />
+
+        <TextView
+            android:id="@+id/tv_add_card_none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Thêm thẻ"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="16sp"
+            android:background="@drawable/custom_bg_cecece"
+            android:gravity="center"
+            android:layout_marginHorizontal="24dp"
+            android:paddingVertical="14dp"
+            android:layout_marginBottom="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_add_card"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Thêm thẻ"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:background="@drawable/custom_bg_ffa92e_round_16"
+            android:gravity="center"
+            android:layout_marginHorizontal="24dp"
+            android:paddingVertical="14dp"
+            android:layout_marginBottom="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

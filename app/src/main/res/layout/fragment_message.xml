@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Nguyễn Minh Cường"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="20sp"
+            android:textColor="#1B1E28"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/csl_booking"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            android:layout_marginTop="28dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_booking_number"
+                android:textColor="#1B1E28"
+                android:text="Booking No: 123123"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:includeFontPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_status_confirm"
+                android:textColor="#FFA92E"
+                android:text="Đang chờ xác nhận"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_booking_number"
+                android:includeFontPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:layout_height="wrap_content"/>
+            
+            <TextView
+                android:id="@+id/tv_detail"
+                app:layout_constraintTop_toTopOf="@id/tv_booking_number"
+                app:layout_constraintBottom_toBottomOf="@id/tv_status_confirm"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Chi tiết"
+                android:textColor="@color/white"
+                android:background="@drawable/custom_bg_ffa92e"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:id="@+id/view_line"
+                android:background="#F7F7F9"
+                app:layout_constraintTop_toBottomOf="@id/tv_status_confirm"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="28dp"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_send"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="28dp"
+            android:src="@drawable/ic_send"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/edt_message_text"
+            android:hint="Gửi tin nhắn"
+            android:textColorHint="#7D848D"
+            android:background="@drawable/custom_bg_f7f7f9"
+            app:layout_constraintStart_toEndOf="@id/iv_add"
+            app:layout_constraintEnd_toStartOf="@id/iv_send"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="24dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="16dp"
+            android:includeFontPadding="false"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_fake_mess_1"
+            app:layout_constraintBottom_toTopOf="@id/edt_message_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="76dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/img_message_fake_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_fake_mess_2"
+            app:layout_constraintBottom_toTopOf="@id/cv_request"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="24dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/img_message_fake_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_request"
+            app:layout_constraintBottom_toTopOf="@id/iv_fake_mess_1"
+            android:layout_marginBottom="25dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="1dp"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_booking_price"
+                    android:text="Booking No: 123123 - 200.000đ/giờ"
+                    android:fontFamily="@font/inter_medium"
+                    android:textSize="14sp"
+                    android:textColor="#1B1E28"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_booking_content"
+                    android:text="Cường đã đưa ra mức giá 200.000vnđ/ giờ. Bạn có đồng ý không?"
+                    android:fontFamily="@font/inter_regular"
+                    android:textSize="12sp"
+                    android:textColor="#7D848D"
+                    android:layout_marginHorizontal="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_booking_price"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_confirm"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_booking_content"
+                    android:text="Đồng ý"
+                    android:fontFamily="@font/inter_semibold"
+                    android:textSize="8sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/custom_bg_ffa92e"
+                    android:paddingVertical="7dp"
+                    android:paddingHorizontal="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_continue"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_booking_content"
+                    android:text="Tiếp tục thương lượng"
+                    android:fontFamily="@font/inter_semibold"
+                    android:textSize="8sp"
+                    app:layout_constraintEnd_toStartOf="@id/tv_confirm"
+                    android:background="@drawable/custom_bg_fff5e5"
+                    android:paddingVertical="7dp"
+                    android:paddingHorizontal="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#FFA92E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_booking_content"
+                    android:text="Hủy yêu cầu"
+                    android:fontFamily="@font/inter_semibold"
+                    android:textSize="8sp"
+                    app:layout_constraintEnd_toStartOf="@id/tv_continue"
+                    android:background="@drawable/custom_bg_fff5e5"
+                    android:paddingVertical="7dp"
+                    android:paddingHorizontal="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#FFA92E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

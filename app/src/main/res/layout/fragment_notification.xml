@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Thông báo"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="20sp"
+            android:textColor="#1B1E28"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/csl_accept_request"
+            android:background="#FFF5E5"
+            android:layout_marginTop="26dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_noti_round_1"
+                android:src="@drawable/img_noti_round_1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"/>
+
+            <TextView
+                android:id="@+id/tv_title_1"
+                android:text="Yêu cầu được chấp nhận"
+                android:textColor="#1B1E28"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="16sp"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_noti_round_1"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_time_1"
+                android:text="Th5, 12:40"
+                android:textColor="#7D848D"
+                android:fontFamily="@font/inter_regular"
+                android:textSize="11sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_content_1"
+                android:layout_width="0dp"
+                android:includeFontPadding="false"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_1"
+                app:layout_constraintStart_toEndOf="@id/iv_noti_round_1"
+                android:text="Nguyễn Mạnh cường đã chấp nhận yêu cầu của bạn"
+                android:textColor="#7D848D"
+                android:fontFamily="@font/inter_regular"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:text="Nhắn tin"
+                app:layout_constraintTop_toBottomOf="@id/tv_content_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/custom_bg_ffa92e_round_8"
+                android:textColor="@color/white"
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="10sp"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:text="Chi tiết"
+                app:layout_constraintTop_toBottomOf="@id/tv_content_1"
+                app:layout_constraintEnd_toStartOf="@id/tv_message"
+                android:background="@drawable/custom_bg_stroke_ffa92e_round_8"
+                android:textColor="#FFA92E"
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="10sp"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/csl_noti_1"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/csl_accept_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_noti_round_2"
+                android:src="@drawable/img_noti_round_2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"/>
+
+            <TextView
+                android:id="@+id/tv_title_2"
+                android:text="Mẹo hay"
+                android:textColor="#1B1E28"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="16sp"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_noti_round_2"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_time_2"
+                android:text="Tuần trước"
+                android:textColor="#7D848D"
+                android:fontFamily="@font/inter_regular"
+                android:textSize="11sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_content_2"
+                android:layout_width="0dp"
+                android:includeFontPadding="false"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_2"
+                app:layout_constraintStart_toEndOf="@id/iv_noti_round_2"
+                android:text="Chia sẻ cách để tự kiểm tra điều hòa khi xảy ra hỏng hóc"
+                android:textColor="#7D848D"
+                android:fontFamily="@font/inter_regular"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"
+                android:ellipsize="end" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/csl_noti_2"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/csl_noti_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_noti_round_3"
+                android:src="@drawable/img_noti_round_3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"/>
+
+            <TextView
+                android:id="@+id/tv_title_3"
+                android:text="Đánh giá"
+                android:textColor="#1B1E28"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="16sp"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_noti_round_3"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_time_3"
+                android:text="Tuần trước"
+                android:textColor="#7D848D"
+                android:fontFamily="@font/inter_regular"
+                android:textSize="11sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_content_3"
+                android:layout_width="0dp"
+                android:includeFontPadding="false"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_3"
+                app:layout_constraintStart_toEndOf="@id/iv_noti_round_3"
+                android:text="Bạn có ý kiến gì sau khi sử dụng dịch vụ sửa chữa"
+                android:textColor="#7D848D"
+                android:fontFamily="@font/inter_regular"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"
+                android:ellipsize="end" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/view_bottom_navigation"
+            layout="@layout/layout_bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

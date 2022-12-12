@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_bg_white">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:text="Thời gian dự kiến"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/inter_regular"
+                android:textSize="12sp"
+                android:textColor="#494F58"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_time_show"
+                android:text="Hôm nay, 22:30"
+                app:layout_constraintTop_toBottomOf="@id/tv_time"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/inter_bold"
+                android:textSize="18sp"
+                android:textColor="#494F58"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.datetimepicker.SingleDateAndTimePicker
+                android:id="@+id/picker_start_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_time_show"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:id="@+id/tv_set_time"
+                app:layout_constraintTop_toBottomOf="@id/picker_start_day"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="24dp"
+                android:text="Hẹn lịch"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/custom_bg_ffa92e_round_16"
+                android:paddingVertical="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+<!--            <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker-->
+<!--                android:id="@+id/single_day_picker"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:picker_itemSpacing="6dp"-->
+<!--                app:picker_curvedMaxAngle="45"-->
+<!--                app:picker_curved="true"-->
+<!--                app:picker_selectorColor="@android:color/transparent"-->
+<!--                app:picker_stepSizeHours="2"-->
+<!--                app:picker_stepSizeMinutes="5"-->
+<!--                app:picker_cyclic="false"-->
+<!--                app:picker_dayCount="31"-->
+<!--                app:picker_mustBeOnFuture="true"-->
+<!--                app:picker_visibleItemCount="7"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/tv_time_show"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</layout>

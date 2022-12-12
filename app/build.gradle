@@ -1,0 +1,147 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+//    id 'com.google.gms.google-services'
+//    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    namespace 'com.va.workercall'
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
+
+    bundle {
+        language {
+            // Specifies that the app bundle should not support
+            // configuration APKs for language resources. These
+            // resources are instead packaged with each base and
+            // dynamic feature APK.
+            enableSplit = false
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.va.workercall"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions "default"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        renderscriptTargetApi 29
+        renderscriptSupportModeEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xmaxerrs" << "500" // or whatever number you want
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    productFlavors {
+        product {
+            dimension "default"
+        }
+        dev {
+            dimension "default"
+            applicationId = 'com.va.workercall'
+
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    /*Core*/
+    implementation libraries.androidAppCopmpat
+    implementation libraries.multidex
+    implementation libraries.ktxCore
+    /*UI*/
+    implementation libraries.androidxNavigationKtx
+    implementation libraries.androidUICommon
+    implementation libraries.materialDesign
+    implementation libraries.hilt
+    implementation libraries.glide
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    kapt libraries.hiltKpt
+    annotationProcessor libraries.hiltAP
+    annotationProcessor libraries.glideAP
+
+//    implementation project(path: ':transition')
+//    implementation project(path: ':trim_audio')
+//    implementation project(path: ':capva')
+//    implementation project(path: ':keyboardheightprovider')
+    /*Firebase*/
+//    implementation platform('com.google.firebase:firebase-bom:30.1.0')
+//    implementation 'com.google.firebase:firebase-crashlytics'
+//    implementation 'com.google.firebase:firebase-analytics'
+//    implementation 'com.google.firebase:firebase-messaging'
+//    implementation 'com.google.firebase:firebase-config'
+
+    /*Database ( if use Room) */
+    implementation libraries.room
+    implementation libraries.roomRxjava
+    annotationProcessor libraries.roomKpt
+    kapt libraries.roomAP
+
+    /*Other*/
+    implementation libraries.coroutine
+//    implementation libraries.rxJava
+    implementation libraries.retrofitWithLogger
+//    implementation libraries.retrofitRXjavaAdapter
+    implementation libraries.timberLog
+    implementation libraries.lifeCycle
+    implementation libraries.lifeCycleKtx
+    implementation 'androidx.preference:preference-ktx:1.1.1'
+    implementation libraries.viewPager
+    implementation libraries.eventBus
+    implementation libraries.hawk
+//    implementation libraries.realtimeblurview
+    implementation libraries.gif
+//    implementation libraries.exoplayer
+//    implementation libraries.ffmpeg
+    /*Test*/
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation testLib
+
+        implementation project(path: ':singledateandtimepicker')
+
+//    implementation 'com.github.florent37:singledateandtimepicker:2.2.7'
+
+//    implementation files('libs/isoparser-1.1.22.jar')
+//    implementation 'com.github.trungsteven.ControlAdsMediation:app:1.0.61'
+//    implementation 'com.github.trungsteven.ControlAdsMediation:nativetemplates:1.0.61'
+//    implementation 'com.ironsource.sdk:mediationsdk:7.2.3.1'
+}

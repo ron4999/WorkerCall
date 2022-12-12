@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Đăng kí"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_reg_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Đăng kí để sử dụng ứng dụng"
+            android:textColor="#7D848D"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_reg" />
+
+        <EditText
+            android:id="@+id/edt_reg_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/custom_bg_f7f7f9"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Nhập số điện thoại"
+            android:inputType="number"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="18dp"
+            android:textColor="#1B1E28"
+            android:textColorHint="#7D848D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_reg_content" />
+
+        <EditText
+            android:id="@+id/edt_reg_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_bg_f7f7f9"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Nhập họ tên"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="18dp"
+            android:textColor="#1B1E28"
+            android:textColorHint="#7D848D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_reg_username" />
+
+        <TextView
+            android:id="@+id/btn_reg_none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_bg_cecece"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:paddingVertical="18dp"
+            android:text="Đăng kí"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_reg_password" />
+
+        <TextView
+            android:id="@+id/btn_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_bg_gradient_round_16"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:paddingVertical="18dp"
+            android:text="Đăng kí"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_reg_password" />
+
+        <TextView
+            android:id="@+id/tv_or_reg_with"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Hoặc đăng kí bằng"
+            android:textColor="#443E3E"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_reg_none" />
+
+        <TextView
+            android:id="@+id/tv_facebook"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/custom_bg_social"
+            android:drawableStart="@drawable/ic_fb"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"
+            android:text="Facebook"
+            android:textColor="#443E3E"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_google"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_or_reg_with" />
+
+        <TextView
+            android:id="@+id/tv_google"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/custom_bg_social"
+            android:drawableStart="@drawable/ic_gg"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"
+            android:text="Google"
+            android:textColor="#443E3E"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_facebook"
+            app:layout_constraintTop_toBottomOf="@id/tv_or_reg_with" />
+
+        <TextView
+            android:id="@+id/tv_have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Bạn đã có tài khoản? Đăng nhập"
+            android:textColor="#443E3E"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

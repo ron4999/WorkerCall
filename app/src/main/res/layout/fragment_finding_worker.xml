@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_map"
+            android:src="@drawable/img_map"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/view_describe_job"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Tìm thợ"
+            android:textColor="#1B1E28"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_place_finding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_bg_white"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/inter_regular"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="14dp"
+            android:textColor="#1B1E28"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_map_point_big"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:text="42, Trần Thái Tông, Cầu Giấy" />
+
+        <View
+            android:id="@+id/view_finding_worker"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/tv_title_finding"
+            android:background="@drawable/custom_bg_white"
+            android:layout_marginHorizontal="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/line_finding_worker"/>
+
+        <TextView
+            android:id="@+id/tv_title_finding"
+            app:layout_constraintBottom_toTopOf="@id/tv_finding_worker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Vui lòng chờ trong giây lát"
+            android:paddingTop="12dp"
+            android:textColor="#FFA92E"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter_regular"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_finding_worker"
+            app:layout_constraintBottom_toTopOf="@id/tv_finding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Hệ thống đang tìm thợ"
+            android:textColor="#1B1E28"
+            android:textSize="20sp"
+            android:fontFamily="@font/inter_medium"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_finding"
+            android:text="Đang tìm"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="16sp"
+            android:background="@drawable/custom_bg_33000000"
+            android:paddingVertical="14dp"
+            android:layout_marginBottom="38dp"
+            app:layout_constraintBottom_toTopOf="@id/view_describe_job"
+            app:layout_constraintStart_toStartOf="@id/view_finding_worker"
+            app:layout_constraintEnd_toEndOf="@id/view_finding_worker"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_marginHorizontal="18dp"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:id="@+id/line_finding_worker"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_finding"
+            android:layout_marginTop="12dp"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:id="@+id/tv_finish_finding"
+            android:text="Xem ngay"
+            android:visibility="invisible"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="38dp"
+            android:background="@drawable/custom_bg_gradient_round_16"
+            android:paddingVertical="14dp"
+            app:layout_constraintBottom_toTopOf="@id/view_describe_job"
+            app:layout_constraintStart_toStartOf="@id/view_finding_worker"
+            app:layout_constraintEnd_toEndOf="@id/view_finding_worker"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_marginHorizontal="18dp"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:id="@+id/view_describe_job"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/view_distance"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <View
+            android:id="@+id/view_distance"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toTopOf="@id/view_place_and_time"
+            android:layout_marginBottom="20dp"/>
+
+        <View
+            android:id="@+id/view_place_and_time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="24dp"
+            android:background="@drawable/custom_bg_f7f7f9"
+            app:layout_constraintBottom_toBottomOf="@id/tv_job_place"
+            app:layout_constraintTop_toTopOf="@id/tv_title_job" />
+
+        <TextView
+            android:id="@+id/tv_title_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/inter_bold"
+            android:paddingTop="12dp"
+            android:text="Điện lạnh"
+            android:textColor="#1B1E28"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_job_time"
+            app:layout_constraintStart_toStartOf="@id/view_describe_wrong" />
+
+        <TextView
+            android:id="@+id/tv_job_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="12dp"
+            android:text="Hôm nay, 08:30 - 10:30"
+            android:textColor="#7D848D"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_calendar_choose"
+            app:layout_constraintBottom_toTopOf="@id/tv_job_place"
+            app:layout_constraintEnd_toEndOf="@id/view_describe_wrong"
+            app:layout_constraintStart_toStartOf="@id/view_describe_wrong" />
+
+        <TextView
+            android:id="@+id/tv_job_place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="15dp"
+            android:paddingBottom="20dp"
+            android:text="45 Trần Thái Tông"
+            android:textColor="#7D848D"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_map_point_big"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_describe_wrong"
+            app:layout_constraintEnd_toEndOf="@id/view_describe_wrong"
+            app:layout_constraintStart_toStartOf="@id/view_describe_wrong" />
+
+        <View
+            android:id="@+id/view_describe_wrong"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="24dp"
+            android:background="@drawable/custom_bg_f7f7f9"
+            app:layout_constraintBottom_toBottomOf="@id/tv_describe_wrong"
+            app:layout_constraintTop_toTopOf="@id/tv_title_describe_wrong" />
+
+        <TextView
+            android:id="@+id/tv_title_describe_wrong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/inter_bold"
+            android:paddingTop="12dp"
+            android:text="Mô tả tình trạng"
+            android:textColor="#1B1E28"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_describe_wrong"
+            app:layout_constraintStart_toStartOf="@id/view_describe_wrong" />
+
+        <TextView
+            android:id="@+id/tv_describe_wrong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="start"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="12dp"
+            android:text="Tủ lạnh không chạy, không làm mát được, quạt bị hỏng"
+            android:textColor="#7D848D"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_job_tip"
+            app:layout_constraintEnd_toEndOf="@id/view_describe_wrong"
+            app:layout_constraintStart_toStartOf="@id/view_describe_wrong" />
+
+        <TextView
+            android:id="@+id/tv_title_job_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Loại công việc"
+            android:textColor="#1B1E28"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/ll_key_word_list"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_key_word_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="33dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tv_fix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/custom_bg_fff5e5"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="7dp"
+                android:text="Điện lạnh"
+                android:textColor="#FFA92E" />
+
+            <TextView
+                android:id="@+id/tv_care"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/custom_bg_fff5e5"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="7dp"
+                android:text="Ống nước"
+                android:textColor="#FFA92E" />
+
+            <TextView
+                android:id="@+id/tv_clean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/custom_bg_fff5e5"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="7dp"
+                android:text="Dọn dẹp"
+                android:textColor="#FFA92E" />
+
+            <TextView
+                android:id="@+id/tv_install"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/custom_bg_fff5e5"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="7dp"
+                android:text="Điện"
+                android:textColor="#FFA92E" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

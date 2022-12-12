@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Thanh toán"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#1B1E28"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_add_payment"
+            android:src="@drawable/ic_add_payment"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_height="wrap_content"/>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scroll_view"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="28dp"
+            android:fillViewport="true"
+            android:measureAllChildren="false"
+            android:orientation="horizontal"
+            android:scrollbars="none"
+            android:layout_marginStart="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_card_1"
+                    android:src="@drawable/img_card_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="315dp"
+                    android:layout_height="184dp"/>
+
+                <ImageView
+                    android:id="@+id/iv_card_2"
+                    android:visibility="gone"
+                    android:src="@drawable/img_card_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_card_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_width="315dp"
+                    android:layout_height="184dp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tv_title_payment"
+            android:text="Thẻ/tài khoản/ví liên kết"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_scroll_view"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="36dp"
+            android:layout_marginStart="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_menu"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_payment"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="16dp"
+            android:background="@drawable/custom_bg_white"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/csl_card_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="8dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_master_card"
+                        android:src="@drawable/ic_master_card"
+                        android:layout_marginStart="11dp"
+                        app:layout_constraintTop_toTopOf="@id/tv_type_master_card"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_number_master_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tv_type_master_card"
+                        android:text="Master Card"
+                        android:fontFamily="@font/inter_medium"
+                        android:textSize="16sp"
+                        android:textColor="#1B1E28"
+                        app:layout_constraintStart_toEndOf="@id/iv_master_card"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_width="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/iv_number_master_card"
+                        app:layout_constraintStart_toEndOf="@id/iv_master_card"
+                        app:layout_constraintTop_toBottomOf="@id/tv_type_master_card"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/img_card_number_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/iv_next_master_card"
+                        android:src="@drawable/ic_next"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_type_master_card"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_number_master_card"
+                        android:layout_marginEnd="11dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view_horizontal_1"
+                    app:layout_constraintTop_toBottomOf="@id/csl_card_1"
+                    android:background="#F7F7F9"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/csl_card_2"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/view_horizontal_1"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="8dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_visa"
+                        android:src="@drawable/ic_visa"
+                        android:layout_marginStart="11dp"
+                        app:layout_constraintTop_toTopOf="@id/tv_type_visa"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_number_visa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tv_type_visa"
+                        android:text="Visa Debit/Credit"
+                        android:fontFamily="@font/inter_medium"
+                        android:textSize="16sp"
+                        android:textColor="#1B1E28"
+                        app:layout_constraintStart_toEndOf="@id/iv_visa"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_width="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/iv_number_visa"
+                        app:layout_constraintStart_toEndOf="@id/iv_visa"
+                        app:layout_constraintTop_toBottomOf="@id/tv_type_visa"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/img_card_number_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/iv_next_visa"
+                        android:src="@drawable/ic_next"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_type_visa"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_number_visa"
+                        android:layout_marginEnd="11dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
