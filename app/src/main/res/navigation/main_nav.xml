@@ -157,6 +157,9 @@
         <action
             android:id="@+id/action_personalFragment_to_paymentFragment"
             app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/action_personalFragment_to_accountSettingFragment"
+            app:destination="@id/accountSettingFragment" />
     </fragment>
     <fragment
         android:id="@+id/policyFragment"
@@ -190,4 +193,43 @@
         android:id="@+id/payByCardFragment"
         android:name="com.va.workercall.ui.main.paybycard.PayByCardFragment"
         android:label="PayByCardFragment" />
+    <fragment
+        android:id="@+id/accountSettingFragment"
+        android:name="com.va.workercall.ui.main.accountsetting.AccountSettingFragment"
+        android:label="AccountSettingFragment" >
+        <action
+            android:id="@+id/action_accountSettingFragment_to_notiSettingFragment"
+            app:destination="@id/notiSettingFragment" />
+        <action
+            android:id="@+id/action_accountSettingFragment_to_privateSettingFragment"
+            app:destination="@id/privateSettingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notiSettingFragment"
+        android:name="com.va.workercall.ui.main.notisetting.NotiSettingFragment"
+        android:label="NotiSettingFragment" />
+    <fragment
+        android:id="@+id/privateSettingFragment"
+        android:name="com.va.workercall.ui.main.privatesetting.PrivateSettingFragment"
+        android:label="PrivateSettingFragment" >
+        <action
+            android:id="@+id/action_privateSettingFragment_to_systemSettingFragment"
+            app:destination="@id/systemSettingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/systemSettingFragment"
+        android:name="com.va.workercall.ui.main.systemsetting.SystemSettingFragment"
+        android:label="SystemSettingFragment" />
+    <fragment
+        android:id="@+id/editServiceFragment"
+        android:name="com.va.workercall.ui.main.editservice.EditServiceFragment"
+        android:label="EditServiceFragment" />
+    <fragment
+        android:id="@+id/myService"
+        android:name="com.va.workercall.ui.main.myservice.MyService"
+        android:label="MyService" />
+    <fragment
+        android:id="@+id/homeWorkerFragment"
+        android:name="com.va.workercall.ui.main.homeworker.HomeWorkerFragment"
+        android:label="HomeWorkerFragment" />
 </navigation>

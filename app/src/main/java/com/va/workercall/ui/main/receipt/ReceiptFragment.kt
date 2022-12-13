@@ -47,6 +47,16 @@ class ReceiptFragment : BaseBindingFragment<FragmentReceiptBinding, ReceiptViewM
         binding.ivCalendar.setOnClickListener {
             navigateScreen(null, R.id.calendarFragment)
         }
+
+        binding.viewBottomNavigation.btnNoti.setOnClickListener {
+            popBackStackWithInclusive(R.id.homeFragment, false)
+            navigateScreen(null, R.id.notificationFragment)
+        }
+
+        binding.viewBottomNavigation.btnPersonal.setOnClickListener {
+            popBackStackWithInclusive(R.id.homeFragment, false)
+            navigateScreen(null, R.id.personalFragment)
+        }
     }
 
     private fun initRecyclerView() {

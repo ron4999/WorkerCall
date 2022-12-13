@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.va.workercall.R
 import com.va.workercall.common.models.WorkerInfo
 import com.va.workercall.databinding.ItemPublicBinding
+import com.va.workercall.databinding.ItemWorkerFavouriteBinding
 
 class WorkerPublicAdapter(private val mContext: Context, private val workerPublicListener: WorkerPublicListener) :
     RecyclerView.Adapter<WorkerPublicAdapter.WorkerPublicViewHolder>() {

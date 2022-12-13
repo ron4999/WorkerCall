@@ -1,19 +1,19 @@
-package com.va.workercall.ui.main.message
+package com.va.workercall.ui.main.systemsetting
 
 import android.os.Bundle
 import android.view.View
 import com.va.workercall.R
-import com.va.workercall.databinding.FragmentMessageBinding
+import com.va.workercall.databinding.FragmentSystemSettingBinding
 import com.va.workercall.ui.base.BaseBindingFragment
 import com.va.workercall.ui.main.MainViewModel
 
-class MessageFragment : BaseBindingFragment<FragmentMessageBinding, MainViewModel>() {
+class SystemSettingFragment : BaseBindingFragment<FragmentSystemSettingBinding, MainViewModel>() {
     override fun getViewModel(): Class<MainViewModel> {
         return MainViewModel::class.java
     }
 
     override val layoutId: Int
-        get() = R.layout.fragment_message
+        get() = R.layout.fragment_system_setting
 
     override fun onCreatedView(view: View?, savedInstanceState: Bundle?) {
         onClickListener()
@@ -23,19 +23,11 @@ class MessageFragment : BaseBindingFragment<FragmentMessageBinding, MainViewMode
         binding.ivBack.setOnClickListener {
             popBackStack()
         }
-
-        binding.tvDetail.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putInt("BOOKING_NUMBER", 123123)
-            navigateScreen(bundle, R.id.receiptDetailFragment)
-        }
     }
 
     override fun onPermissionGranted() {
-
     }
 
     override fun observerData() {
-
     }
 }

@@ -52,6 +52,10 @@ class PersonalFragment : BaseBindingFragment<FragmentPersonalBinding, MainViewMo
         binding.tvPayment.setOnClickListener {
             navigateScreen(null, R.id.paymentFragment)
         }
+
+        binding.tvAccountSetting.setOnClickListener {
+            navigateScreen(null, R.id.accountSettingFragment)
+        }
     }
 
     private fun setupBottom() {

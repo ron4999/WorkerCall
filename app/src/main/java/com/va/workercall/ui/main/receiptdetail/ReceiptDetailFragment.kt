@@ -22,6 +22,7 @@ class ReceiptDetailFragment : BaseBindingFragment<FragmentReceiptDetailBinding, 
 
         arguments?.let {
             val number = it.getInt("BOOKING_NUMBER")
+            val isFromPaymentSuccess = it.getBoolean("IS_FROM_PAYMENT_SUCCESS")
             binding.tvTitle.text = "Booking No: $number"
             when (number) {
                 123123 -> {
@@ -36,8 +37,15 @@ class ReceiptDetailFragment : BaseBindingFragment<FragmentReceiptDetailBinding, 
                 }
                 789898 -> {
                     binding.ivReceipt.setImageResource(R.drawable.img_receipt_finish)
-                    binding.tvByCard.visibility = View.VISIBLE
-                    binding.tvByMoney.visibility = View.VISIBLE
+                    if (!isFromPaymentSuccess) {
+                        binding.tvByCard.visibility = View.VISIBLE
+                        binding.tvByMoney.visibility = View.VISIBLE
+                        binding.tvSendFeedback.visibility = View.GONE
+                    } else {
+                        binding.tvByCard.visibility = View.GONE
+                        binding.tvByMoney.visibility = View.GONE
+                        binding.tvSendFeedback.visibility = View.VISIBLE
+                    }
                 }
             }
         }
@@ -55,6 +63,11 @@ class ReceiptDetailFragment : BaseBindingFragment<FragmentReceiptDetailBinding, 
 
         binding.tvByCard.setOnClickListener {
             navigateScreen(null, R.id.payByCardFragment)
+        }
+
+        binding.tvSendFeedback.setOnClickListener {
+            popBackStackWithInclusive(R.id.homeFragment, false)
+            navigateScreen(null, R.id.rateFragment)
         }
     }
 

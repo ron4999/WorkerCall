@@ -1,19 +1,19 @@
-package com.va.workercall.ui.main.message
+package com.va.workercall.ui.main.privatesetting
 
 import android.os.Bundle
 import android.view.View
 import com.va.workercall.R
-import com.va.workercall.databinding.FragmentMessageBinding
+import com.va.workercall.databinding.FragmentPrivateSettingBinding
 import com.va.workercall.ui.base.BaseBindingFragment
 import com.va.workercall.ui.main.MainViewModel
 
-class MessageFragment : BaseBindingFragment<FragmentMessageBinding, MainViewModel>() {
+class PrivateSettingFragment : BaseBindingFragment<FragmentPrivateSettingBinding, MainViewModel>() {
     override fun getViewModel(): Class<MainViewModel> {
         return MainViewModel::class.java
     }
 
     override val layoutId: Int
-        get() = R.layout.fragment_message
+        get() = R.layout.fragment_private_setting
 
     override fun onCreatedView(view: View?, savedInstanceState: Bundle?) {
         onClickListener()
@@ -24,18 +24,14 @@ class MessageFragment : BaseBindingFragment<FragmentMessageBinding, MainViewMode
             popBackStack()
         }
 
-        binding.tvDetail.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putInt("BOOKING_NUMBER", 123123)
-            navigateScreen(bundle, R.id.receiptDetailFragment)
+        binding.tvPrivateSetting2.setOnClickListener {
+            navigateScreen(null, R.id.systemSettingFragment)
         }
     }
 
     override fun onPermissionGranted() {
-
     }
 
     override fun observerData() {
-
     }
 }

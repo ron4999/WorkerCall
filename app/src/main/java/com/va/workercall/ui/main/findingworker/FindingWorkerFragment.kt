@@ -22,7 +22,7 @@ class FindingWorkerFragment : BaseBindingFragment<FragmentFindingWorkerBinding, 
             if (isAdded) {
                 binding.tvFinding.visibility = View.INVISIBLE
                 binding.tvFinishFinding.visibility = View.VISIBLE
-                binding.tvFindingWorker.text = "Tìm thấy 3 hồ sơ gần bạn"
+                binding.tvFindingWorker.text = "Tìm thấy 4 hồ sơ gần bạn"
                 binding.tvTitleFinding.text = "Chúc mừng"
             }
         }, 3000)

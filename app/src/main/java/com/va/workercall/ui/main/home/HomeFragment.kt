@@ -50,7 +50,7 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding, HomeViewModel>(), 
     private val mBackPressedCallback: OnBackPressedCallback =
         object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                requireActivity().onBackPressed()
+                requireActivity().finish()
             }
         }
 
@@ -101,6 +101,12 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding, HomeViewModel>(), 
 
         binding.viewBottomNavigation.btnNoti.setOnClickListener {
             navigateScreen(null, R.id.notificationFragment)
+        }
+
+        binding.tvGoToDetail.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putInt("BOOKING_NUMBER", 789898)
+            navigateScreen(bundle, R.id.receiptDetailFragment)
         }
     }
 

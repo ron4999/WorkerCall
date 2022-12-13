@@ -103,8 +103,7 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toBottomOf="@id/tv_near_me"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginHorizontal="24dp"
-            tools:listitem="@layout/item_public"
+            tools:listitem="@layout/item_worker_favourite"
             android:layout_marginTop="24dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
