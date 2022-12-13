@@ -28,4 +28,13 @@ class ReceiptViewModel @Inject constructor(
             listReceiptLiveData.postValue(workerRepository.getListReceiptInfo())
         }
     }
+    fun getListReceiptByWorkerInfo() {
+        viewModelScope.launch(Dispatchers.IO + CoroutineExceptionHandler { _, throwable ->
+            run {
+                Timber.e(throwable)
+            }
+        }) {
+            listReceiptLiveData.postValue(workerRepository.getListReceiptByWorkerInfo())
+        }
+    }
 }

@@ -35,6 +35,5 @@ object Constant {
 
     //
     const val EDIT_SERVICE = "EDIT_SERVICE"
-    const val CREATE_SERVICE = "CREATE_SERVICE"
 
 }

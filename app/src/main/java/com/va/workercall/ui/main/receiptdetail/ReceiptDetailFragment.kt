@@ -3,10 +3,12 @@ package com.va.workercall.ui.main.receiptdetail
 import android.os.Bundle
 import android.view.View
 import com.va.workercall.R
+import com.va.workercall.common.Constant
 import com.va.workercall.databinding.FragmentReceiptDetailBinding
 import com.va.workercall.ui.base.BaseBindingFragment
 import com.va.workercall.ui.dialog.DialogBottomCancelReceipt
 import com.va.workercall.ui.dialog.DialogConfirmCancel
+import com.va.workercall.ui.main.MainActivity.Companion.isWorker
 import com.va.workercall.ui.main.MainViewModel
 
 class ReceiptDetailFragment : BaseBindingFragment<FragmentReceiptDetailBinding, MainViewModel>(), DialogBottomCancelReceipt.CancelReceiptListener, DialogConfirmCancel.OnClickListener {
@@ -25,19 +27,37 @@ class ReceiptDetailFragment : BaseBindingFragment<FragmentReceiptDetailBinding, 
             binding.tvTitle.text = "Booking No: $number"
             when (number) {
                 123123 -> {
-                    binding.ivReceipt.setImageResource(R.drawable.img_receipt_waiting)
+                    if (!isWorker) {
+                        binding.ivReceipt.setImageResource(R.drawable.img_receipt_waiting)
+                    } else {
+                        binding.ivReceipt.setImageResource(R.drawable.img_receipt_2_watting)
+                        binding.btnCancel.visibility = View.VISIBLE
+                    }
                 }
                 234324 -> {
-                    binding.ivReceipt.setImageResource(R.drawable.img_receipt_confirmed)
+                    if (!isWorker) {
+                        binding.ivReceipt.setImageResource(R.drawable.img_receipt_confirmed)
+                    } else {
+                        binding.ivReceipt.setImageResource(R.drawable.img_receipt2_confirmed)
+                    }
                     binding.btnCancel.visibility = View.VISIBLE
                 }
                 456565 -> {
-                    binding.ivReceipt.setImageResource(R.drawable.img_receipt_cancel)
+                    if (!isWorker) {
+                        binding.ivReceipt.setImageResource(R.drawable.img_receipt_cancel)
+                    } else {
+                        binding.ivReceipt.setImageResource(R.drawable.img_receipt2_canceled)
+                    }
                 }
                 789898 -> {
-                    binding.ivReceipt.setImageResource(R.drawable.img_receipt_finish)
-                    binding.tvByCard.visibility = View.VISIBLE
-                    binding.tvByMoney.visibility = View.VISIBLE
+                    if (!isWorker) {
+                        binding.ivReceipt.setImageResource(R.drawable.img_receipt_finish)
+                        binding.tvByCard.visibility = View.VISIBLE
+                        binding.tvByMoney.visibility = View.VISIBLE
+                    } else {
+                        binding.ivReceipt.setImageResource(R.drawable.img_receipt2_finished)
+                    }
+
                 }
             }
         }
@@ -50,6 +70,9 @@ class ReceiptDetailFragment : BaseBindingFragment<FragmentReceiptDetailBinding, 
 
         binding.btnCancel.setOnClickListener {
             val dialogCancel: DialogBottomCancelReceipt = DialogBottomCancelReceipt(this)
+            if (isWorker) {
+                dialogCancel.setWorker()
+            }
             dialogCancel.show(childFragmentManager, null)
         }
 
@@ -72,7 +95,11 @@ class ReceiptDetailFragment : BaseBindingFragment<FragmentReceiptDetailBinding, 
     }
 
     override fun onClickLater() {
-        popBackStackWithInclusive(R.id.homeFragment, false)
+        if (!isWorker) {
+            popBackStackWithInclusive(R.id.homeFragment, false)
+        } else {
+            popBackStackWithInclusive(R.id.homeWorkerFragment, false)
+        }
     }
 
     override fun onClickMessage() {

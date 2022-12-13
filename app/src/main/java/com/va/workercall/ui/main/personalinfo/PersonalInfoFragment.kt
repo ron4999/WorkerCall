@@ -7,6 +7,7 @@ import android.widget.Toast
 import com.va.workercall.R
 import com.va.workercall.databinding.FragmentPersonalInfoBinding
 import com.va.workercall.ui.base.BaseBindingFragment
+import com.va.workercall.ui.main.MainActivity
 import com.va.workercall.ui.main.MainViewModel
 
 class PersonalInfoFragment : BaseBindingFragment<FragmentPersonalInfoBinding, MainViewModel>() {
@@ -24,7 +25,22 @@ class PersonalInfoFragment : BaseBindingFragment<FragmentPersonalInfoBinding, Ma
         binding.edtPlace.inputType = InputType.TYPE_NULL
         binding.edtId.inputType = InputType.TYPE_NULL
 
+        initData()
+
         onClickListener()
+    }
+
+    private fun initData() {
+        if (MainActivity.isWorker) {
+            binding.ivAvatar.setImageResource(R.drawable.ic_image_person_1)
+            binding.tvName.setText("Nguyễn Minh Cường")
+            binding.edtName.setText("Nguyễn Minh Cường")
+            binding.tvTitleEditPlace.setText("Email")
+            binding.edtPlace.setText("Minhcuong161@gmail.com")
+            binding.tvChooseMan.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_choose, 0, 0, 0);
+            binding.tvChooseWoman.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_not_choose_grey, 0, 0, 0);
+
+        }
     }
 
     private fun onClickListener() {
