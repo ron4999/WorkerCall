@@ -14,4 +14,7 @@ class WorkerRepository @Inject constructor(var sharedPreferenceHelper: SharedPre
     fun getListReceiptInfo(): MutableList<Receipt> {
         return Utils.getListReceipt()
     }
+    fun getListReceiptByWorkerInfo(): MutableList<Receipt> {
+        return Utils.getListReceiptByWorker()
+    }
 }

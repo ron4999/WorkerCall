@@ -81,4 +81,14 @@ object Utils {
 
         return receiptList
     }
+
+    fun getListReceiptByWorker(): MutableList<Receipt> {
+        val receiptList: MutableList<Receipt> = ArrayList()
+        receiptList.add(Receipt(123123, 1, "Đỗ Phương", "Sửa chữa tủ lạnh", "Hôm nay, 08:30 - 10:30", "45, Trần Thái Tông"))
+        receiptList.add(Receipt(234324, 2, "Nguyễn Vân Anh", "Sửa chữa tủ lạnh", "12/12/2022, 12:30 - 14:30", "Phù Lỗ, Sóc Sơn"))
+        receiptList.add(Receipt(456565, 3, "Trần Hoàng Minh", "Sửa chữa tủ lạnh", "20/12/2022, 08:30 - 10:30", "45, Trần Nhật Duật"))
+        receiptList.add(Receipt(789898, 4, "Cao Thanh Tâm", "Sửa chữa tủ lạnh", "Ngày mai, 08:30 - 10:30", "45, Cầu Giấy"))
+
+        return receiptList
+    }
 }

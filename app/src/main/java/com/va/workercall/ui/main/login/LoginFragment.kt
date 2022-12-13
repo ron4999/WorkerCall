@@ -13,6 +13,7 @@ import androidx.core.widget.doOnTextChanged
 import com.va.workercall.R
 import com.va.workercall.databinding.FragmentLoginBinding
 import com.va.workercall.ui.base.BaseBindingFragment
+import com.va.workercall.ui.main.MainActivity
 import com.va.workercall.ui.main.MainViewModel
 
 class LoginFragment : BaseBindingFragment<FragmentLoginBinding, MainViewModel>() {
@@ -70,10 +71,11 @@ class LoginFragment : BaseBindingFragment<FragmentLoginBinding, MainViewModel>()
 
     private fun onClickListener() {
         binding.btnLogin.setOnClickListener {
+            MainActivity.isWorker = false
             navigateScreen(null, R.id.homeFragment)
         }
-
         binding.ivWorker.setOnClickListener {
+            MainActivity.isWorker = true
             navigateScreen(null, R.id.homeWorkerFragment)
         }
     }

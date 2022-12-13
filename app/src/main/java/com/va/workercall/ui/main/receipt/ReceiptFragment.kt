@@ -7,10 +7,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.tabs.TabLayout
 import com.va.workercall.R
+import com.va.workercall.common.Constant
 import com.va.workercall.common.models.Receipt
 import com.va.workercall.databinding.FragmentReceiptBinding
 import com.va.workercall.ui.adapter.ReceiptAdapter
 import com.va.workercall.ui.base.BaseBindingFragment
+import com.va.workercall.ui.main.MainActivity.Companion.isWorker
 
 class ReceiptFragment : BaseBindingFragment<FragmentReceiptBinding, ReceiptViewModel>(), ReceiptAdapter.OnReceiptListener {
     private var mReceiptList: MutableList<Receipt> = ArrayList()
@@ -41,7 +43,7 @@ class ReceiptFragment : BaseBindingFragment<FragmentReceiptBinding, ReceiptViewM
 
     private fun onClickListener() {
         binding.viewBottomNavigation.ivHome.setOnClickListener {
-            popBackStack()
+            popBackStackWithInclusive(R.id.homeFragment, false)
         }
 
         binding.ivCalendar.setOnClickListener {
@@ -57,6 +59,23 @@ class ReceiptFragment : BaseBindingFragment<FragmentReceiptBinding, ReceiptViewM
             popBackStackWithInclusive(R.id.homeFragment, false)
             navigateScreen(null, R.id.personalFragment)
         }
+
+        binding.viewBottomNavigation.ivHome.setOnClickListener {
+//            popBackStack()
+            if (!isWorker) {
+                popBackStackWithInclusive(R.id.homeFragment, false)
+            } else {
+                popBackStackWithInclusive(R.id.homeWorkerFragment, false)
+            }
+        }
+
+//        binding.viewBottomNavigation.btnPersonal.setOnClickListener {
+//            navigateScreen(null, R.id.personalFragment)
+//        }
+//
+//        binding.viewBottomNavigation.btnNoti.setOnClickListener {
+//            navigateScreen(null, R.id.notificationFragment)
+//        }
     }
 
     private fun initRecyclerView() {
@@ -66,7 +85,11 @@ class ReceiptFragment : BaseBindingFragment<FragmentReceiptBinding, ReceiptViewM
         receiptAdapter = ReceiptAdapter(requireContext(), this)
         binding.rcvReceipt.adapter = receiptAdapter
 
-        viewModel.getListReceiptInfo()
+        if (isWorker) {
+            viewModel.getListReceiptByWorkerInfo()
+        } else {
+            viewModel.getListReceiptInfo()
+        }
     }
 
     private fun initTabLayout() {

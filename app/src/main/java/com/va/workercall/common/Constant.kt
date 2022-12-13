@@ -33,6 +33,7 @@ object Constant {
     const val EVENT_SHOW_TOAST = 2
     const val EVENT_CHANGE_CONFIG = 3
 
+    //
     const val EDIT_SERVICE = "EDIT_SERVICE"
-    const val CREATE_SERVICE = "CREATE_SERVICE"
+
 }

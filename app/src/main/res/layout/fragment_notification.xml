@@ -21,6 +21,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <ImageView
+            android:id="@+id/ivMess"
+            android:src="@drawable/iv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/tv_title"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp"
+            android:visibility="gone"/>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/csl_accept_request"
             android:background="#FFF5E5"

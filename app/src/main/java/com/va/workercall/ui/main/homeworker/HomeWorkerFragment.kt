@@ -56,6 +56,19 @@ class HomeWorkerFragment : BaseBindingFragment<FragmentHomeWorkerBinding, MainVi
         binding.btnAdd.setOnClickListener {
             navigateScreen(bundle2, R.id.editServiceFragment)
         }
+
+        //layout bottom
+        binding.viewBottomNavigation.btnReceipt.setOnClickListener {
+            navigateScreen(null, R.id.receiptFragment)
+        }
+
+        binding.viewBottomNavigation.btnPersonal.setOnClickListener {
+            navigateScreen(null, R.id.personalFragment)
+        }
+
+        binding.viewBottomNavigation.btnNoti.setOnClickListener {
+            navigateScreen(null, R.id.notificationFragment)
+        }
     }
 
     private val mBackPressedCallback: OnBackPressedCallback =

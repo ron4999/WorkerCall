@@ -15,6 +15,10 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding, MainViewModel>() {
     var mNavController: NavController? = null
     private var graph: NavGraph? = null
 
+    companion object {
+        var isWorker = false
+    }
+
     override val layoutId: Int
         get() = R.layout.activity_main
 

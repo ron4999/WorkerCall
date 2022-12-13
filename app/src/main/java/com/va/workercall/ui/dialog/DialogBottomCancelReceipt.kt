@@ -18,6 +18,7 @@ class DialogBottomCancelReceipt constructor(var onCancelReceipt: CancelReceiptLi
     private var reason3: Boolean = false
     private var reason4: Boolean = false
     private var reason5: Boolean = false
+    private var isWorker = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,8 +29,14 @@ class DialogBottomCancelReceipt constructor(var onCancelReceipt: CancelReceiptLi
         return binding.root
     }
 
+    fun setWorker() {
+        isWorker = true
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        initData()
 
         binding.tvReason1.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_not_choose, 0)
         binding.tvReason2.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_not_choose, 0)
@@ -46,6 +53,15 @@ class DialogBottomCancelReceipt constructor(var onCancelReceipt: CancelReceiptLi
         onClickListener()
 
         initListener()
+    }
+
+    private fun initData() {
+        if (isWorker) {
+            binding.tvReason1.setText("Khách ở quá xa")
+            binding.tvReason2.setText("Không sửa được")
+            binding.tvReason3.setText("Có việc đột xuất")
+            binding.tvReason4.setText("Không liên hệ được với khách")
+        }
     }
 
     private fun onClickListener() {
