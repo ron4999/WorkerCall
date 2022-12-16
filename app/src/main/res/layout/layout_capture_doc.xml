@@ -70,6 +70,22 @@
             android:layout_marginTop="28dp"/>
 
         <TextView
+            android:id="@+id/tvDes"
+            android:text="Đảm bảo thẻ chụp không bị mờ thông tin,
+toàn bộ thẻ đều nằm trong khung hình."
+            android:visibility="gone"
+            android:textColor="#7D848D"
+            android:textSize="16sp"
+            android:fontFamily="@font/inter_regular"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:layout_marginHorizontal="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnContinue" />
+        <TextView
             android:id="@+id/btnContinue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

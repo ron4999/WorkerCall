@@ -51,6 +51,7 @@ class TakePhotoFragment : BaseBindingFragment<FragmentTakephotoBinding, MainView
         }
         binding.layoutDoc.btnContinue.setOnClickListener {
             if (!isDone) {
+                binding.layoutCamera.ivImg.visibility = View.GONE
                 binding.layoutDoc.root.visibility = View.GONE
                 showCamera(true)
                 if (!isDocFirst) {
@@ -65,6 +66,7 @@ class TakePhotoFragment : BaseBindingFragment<FragmentTakephotoBinding, MainView
                 }, 2000)
                 Handler(Looper.getMainLooper()).postDelayed(Runnable {
                     if (isAdded) {
+                        binding.layoutDoc.tvDes.visibility = View.VISIBLE
                         binding.layoutDoc.root.visibility = View.VISIBLE
                         binding.layoutDoc.ivDocCmt.visibility = View.VISIBLE
                         binding.layoutDoc.tvTitle.visibility = View.GONE
@@ -73,6 +75,7 @@ class TakePhotoFragment : BaseBindingFragment<FragmentTakephotoBinding, MainView
                             isDone = true
                         }
                         binding.layoutDoc.imgDoc.visibility = View.GONE
+                        binding.layoutCamera.ivImg.visibility = View.GONE
                         isDocFirst = true
                     }
                 }, 4000)
