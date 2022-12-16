@@ -7,6 +7,7 @@ import com.va.workercall.R
 import com.va.workercall.common.Constant
 import com.va.workercall.databinding.FragmentPersonalBinding
 import com.va.workercall.ui.base.BaseBindingFragment
+import com.va.workercall.ui.main.MainActivity
 import com.va.workercall.ui.main.MainActivity.Companion.isWorker
 import com.va.workercall.ui.main.MainViewModel
 
@@ -67,7 +68,11 @@ class PersonalFragment : BaseBindingFragment<FragmentPersonalBinding, MainViewMo
         }
 
         binding.tvPersonalInfo.setOnClickListener {
-            navigateScreen(null, R.id.personalInfoFragment)
+            if (MainActivity.isWorker) {
+                navigateScreen(null, R.id.fragmentSetupWorker)
+            } else {
+                navigateScreen(null, R.id.personalInfoFragment)
+            }
         }
 
         binding.tvFavoriteWorker.setOnClickListener {

@@ -240,4 +240,12 @@
         android:id="@+id/fragmentMap"
         android:name="com.va.workercall.ui.main.map.FragmentMap"
         android:label="FragmentMap" />
+    <fragment
+        android:id="@+id/fragmentTakePhoto"
+        android:name="com.va.workercall.ui.main.takephoto.TakePhotoFragment"
+        android:label="FragmentTakePhoto" />
+    <fragment
+        android:id="@+id/fragmentSetupWorker"
+        android:name="com.va.workercall.ui.main.setupworker.FragmentSetupWorker"
+        android:label="FragmentSetupWorker" />
 </navigation>

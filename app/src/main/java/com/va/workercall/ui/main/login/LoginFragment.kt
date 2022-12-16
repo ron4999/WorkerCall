@@ -8,6 +8,7 @@ import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.core.widget.doOnTextChanged
 import com.va.workercall.R
@@ -37,7 +38,19 @@ class LoginFragment : BaseBindingFragment<FragmentLoginBinding, MainViewModel>()
         onTextChangeListener()
 
         onClickListener()
+
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            mBackPressedCallback
+        )
     }
+
+    private val mBackPressedCallback: OnBackPressedCallback =
+        object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                requireActivity().finish()
+            }
+        }
 
     private fun onTextChangeListener() {
         binding.edtLoginUsername.doOnTextChanged { text, start, before, count ->
@@ -71,12 +84,15 @@ class LoginFragment : BaseBindingFragment<FragmentLoginBinding, MainViewModel>()
 
     private fun onClickListener() {
         binding.btnLogin.setOnClickListener {
-            MainActivity.isWorker = false
-            navigateScreen(null, R.id.homeFragment)
+            if (MainActivity.isWorker) {
+                navigateScreen(null, R.id.homeWorkerFragment)
+            } else {
+                navigateScreen(null, R.id.homeFragment)
+            }
         }
         binding.ivWorker.setOnClickListener {
             MainActivity.isWorker = true
-            navigateScreen(null, R.id.homeWorkerFragment)
+            navigateScreen(null, R.id.registerFragment)
         }
     }
 

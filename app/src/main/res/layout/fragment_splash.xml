@@ -6,7 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/custom_bg_gradient">
+        android:background="#FFA92E">
 
         <ImageView
             android:id="@+id/iv_home_splash"

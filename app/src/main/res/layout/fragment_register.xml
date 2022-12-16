@@ -168,6 +168,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <include android:id="@+id/layoutConfirmCode"
+            layout="@layout/layout_confirm_signup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <include android:id="@+id/layoutCreateUser"
+            layout="@layout/layout_create_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

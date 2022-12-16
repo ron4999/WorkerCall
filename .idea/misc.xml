@@ -12,10 +12,17 @@
         <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/fragment_home_worker.xml" value="0.1" />
         <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/fragment_map.xml" value="0.75" />
         <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/fragment_personal_info.xml" value="0.12545289855072464" />
+        <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/fragment_register.xml" value="0.12907608695652173" />
+        <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/fragment_setup_worker.xml" value="0.12907608695652173" />
+        <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/fragment_splash.xml" value="0.12228260869565218" />
+        <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/fragment_takephoto.xml" value="0.12907608695652173" />
+        <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/fragment_worker_info.xml" value="0.12907608695652173" />
         <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/layout_bottom_map_1.xml" value="0.12545289855072464" />
         <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/layout_bottom_map_2.xml" value="0.12545289855072464" />
         <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/layout_bottom_map_4.xml" value="0.11594202898550725" />
         <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/layout_call.xml" value="0.12545289855072464" />
+        <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/layout_camera.xml" value="0.12907608695652173" />
+        <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/layout_capture_doc.xml" value="0.12907608695652173" />
         <entry key="..\:/Users/Anh/Documents/worker/WorkerCall/app/src/main/res/layout/layout_mess_worker.xml" value="0.12545289855072464" />
         <entry key="..\:/WorkerCall/app/src/main/res/drawable/custom_bg_cecece.xml" value="0.1" />
         <entry key="..\:/WorkerCall/app/src/main/res/drawable/custom_bg_f7f7f9.xml" value="0.1" />
