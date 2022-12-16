@@ -17,6 +17,9 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding, MainViewModel>() {
 
     companion object {
         var isWorker = false
+        var isAccept = false
+        var isToLocation = false
+        var isWorking = false
     }
 
     override val layoutId: Int

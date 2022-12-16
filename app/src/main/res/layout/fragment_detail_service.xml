@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_title"
+            android:text="Thông tin chi tiết"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#1B1E28"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:src="@drawable/ic_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/ivImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_ava_personal"
+            android:layout_marginTop="28dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="@id/iv_back"/>
+        <TextView
+            android:id="@+id/tvCustomer"
+            android:text="Khách hàng"
+            android:textColor="#494F58"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/ivImg"
+            app:layout_constraintStart_toEndOf="@id/ivImg"
+            android:layout_marginStart="16dp"/>
+        <TextView
+            android:id="@+id/tvName"
+            android:text="Đỗ Phương"
+            android:textSize="16sp"
+            android:textColor="#FFA92E"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tvCustomer"
+            app:layout_constraintTop_toBottomOf="@id/tvCustomer"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:id="@+id/ivMess"
+            android:src="@drawable/iv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintTop_toTopOf="@id/ivImg"
+            app:layout_constraintBottom_toBottomOf="@id/ivImg"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvService"
+            android:text="Dịch vụ sửa chữa"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            android:fontFamily="@font/inter_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ivImg"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="@id/ivImg"/>
+        <TextView
+            android:id="@+id/tvDesService"
+            android:text="Sửa chữa tủ lạnh"
+            android:textColor="#494F58"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvService"
+            app:layout_constraintStart_toStartOf="@id/tvService"/>
+
+        <TextView
+            android:id="@+id/tvDescribe"
+            android:text="Mô tả tình trạng"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            android:fontFamily="@font/inter_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvDesService"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@id/tvDesService"/>
+        <TextView
+            android:id="@+id/tvDescribe2"
+            android:text="Tủ lạnh không chạy, không làm mát được, quạt bị hỏng"
+            android:textColor="#494F58"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintTop_toBottomOf="@id/tvDescribe"
+            app:layout_constraintStart_toStartOf="@id/tvDescribe"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNote"
+            android:text="Ghi chú"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            android:fontFamily="@font/inter_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvDescribe2"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@id/tvDescribe2"/>
+        <TextView
+            android:id="@+id/tvDesNote"
+            android:text="Không có"
+            android:textColor="#494F58"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvNote"
+            app:layout_constraintStart_toStartOf="@id/tvNote"/>
+
+        <TextView
+            android:id="@+id/tvCalendar"
+            android:text="Lịch hẹn"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            android:fontFamily="@font/inter_bold"
+            android:drawableStart="@drawable/ic_calendar_choose"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvDesNote"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@id/tvDesNote"/>
+        <TextView
+            android:id="@+id/tvTime"
+            android:text="Today, 22:30"
+            android:textColor="#494F58"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCalendar"
+            app:layout_constraintStart_toStartOf="@id/tvCalendar"/>
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:text="Địa chỉ"
+            android:textSize="16sp"
+            android:textColor="#1B1E28"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:drawableStart="@drawable/ic_map_point"
+            android:drawablePadding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvTime"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@id/tvTime"/>
+        <TextView
+            android:id="@+id/tvDesAddress"
+            android:text="42, Trần Thái Tông, Cầu Giấy"
+            android:textColor="#494F58"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvAddress"
+            app:layout_constraintStart_toStartOf="@id/tvAddress"/>
+
+        <TextView
+            android:id="@+id/tv_reject"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/custom_bg_fff4e5"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:text="Từ chối"
+            android:textColor="#FFA92E"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/custom_bg_ffa92e"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:text="Xác nhận"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

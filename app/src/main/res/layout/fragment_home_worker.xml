@@ -148,17 +148,16 @@
 
         </androidx.core.widget.NestedScrollView>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <ImageView
             android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_add_float"
-            android:backgroundTint="#FFA92E"
+            app:srcCompat="@drawable/ic_add_2"
             app:layout_constraintBottom_toTopOf="@id/view_bottom_navigation"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginBottom="30dp"
             android:layout_marginEnd="30dp"
-            android:tint="@color/white"     />
+            />
 
         <include
             android:id="@+id/view_bottom_navigation"

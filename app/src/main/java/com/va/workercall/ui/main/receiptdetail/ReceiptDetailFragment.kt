@@ -2,6 +2,7 @@ package com.va.workercall.ui.main.receiptdetail
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import com.va.workercall.R
 import com.va.workercall.common.Constant
 import com.va.workercall.databinding.FragmentReceiptDetailBinding
@@ -12,6 +13,7 @@ import com.va.workercall.ui.main.MainActivity.Companion.isWorker
 import com.va.workercall.ui.main.MainViewModel
 
 class ReceiptDetailFragment : BaseBindingFragment<FragmentReceiptDetailBinding, MainViewModel>(), DialogBottomCancelReceipt.CancelReceiptListener, DialogConfirmCancel.OnClickListener {
+    private var toHome = false
     override fun getViewModel(): Class<MainViewModel> {
         return MainViewModel::class.java
     }
@@ -20,9 +22,15 @@ class ReceiptDetailFragment : BaseBindingFragment<FragmentReceiptDetailBinding, 
         get() = R.layout.fragment_receipt_detail
 
     override fun onCreatedView(view: View?, savedInstanceState: Bundle?) {
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            mBackPressedCallback
+        )
+
         onClickListener()
 
         arguments?.let {
+            toHome = it.getBoolean("TO_HOME")
             val number = it.getInt("BOOKING_NUMBER")
             val isFromPaymentSuccess = it.getBoolean("IS_FROM_PAYMENT_SUCCESS")
             binding.tvTitle.text = "Booking No: $number"
@@ -72,9 +80,25 @@ class ReceiptDetailFragment : BaseBindingFragment<FragmentReceiptDetailBinding, 
         }
     }
 
+    private val mBackPressedCallback: OnBackPressedCallback =
+        object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                backPress()
+            }
+        }
+
+    private fun backPress() {
+        if (toHome) {
+            navigateScreen(null, R.id.homeWorkerFragment)
+        } else {
+            mBackPressedCallback.isEnabled = false
+            requireActivity().onBackPressed()
+        }
+    }
+
     private fun onClickListener() {
         binding.ivBack.setOnClickListener {
-            popBackStack()
+            backPress()
         }
 
         binding.btnCancel.setOnClickListener {

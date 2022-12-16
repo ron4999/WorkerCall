@@ -232,4 +232,12 @@
         android:id="@+id/homeWorkerFragment"
         android:name="com.va.workercall.ui.main.homeworker.HomeWorkerFragment"
         android:label="HomeWorkerFragment" />
+    <fragment
+        android:id="@+id/detailServiceFragment"
+        android:name="com.va.workercall.ui.main.detailservice.DetailServiceFragment"
+        android:label="DetailServiceFragment" />
+    <fragment
+        android:id="@+id/fragmentMap"
+        android:name="com.va.workercall.ui.main.map.FragmentMap"
+        android:label="FragmentMap" />
 </navigation>
